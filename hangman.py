@@ -1,22 +1,17 @@
 import random
-
 # 1. Words ki list - yahan apne words daal
 words = ['ZARA', 'LAPTOP', 'PYTHON', 'GAMING', 'KANPUR', 'CODE']
-
 # 2. Computer random word choose karega
 word = random.choice(words)
 guessed = ['_'] * len(word) # _ _ _ _ _ _ banayega
 lives = 6 # 6 galti tak bachega
-
 print("=== HANGMAN GAME ===")
 print("Word:", ' '.join(guessed))
-print(f"Tere paas {lives} lives hain 💖")
-
+print(f"Tere paas {lives} lives hain ")
 # 3. Jab tak lives hain aur word poora nahi hua
 while lives > 0 and '_' in guessed:
     print("\n------------------")
     guess = input("Ek letter daal: ").upper()
-
     # Check karo letter word mein hai ya nahi
     if guess in word:
         print("✅ Sahi pakde hain!")
